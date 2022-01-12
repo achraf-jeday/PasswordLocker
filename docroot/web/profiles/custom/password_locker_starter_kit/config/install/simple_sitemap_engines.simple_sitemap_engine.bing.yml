@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: bing
-label: Bing
-url: 'https://www.bing.com/ping?sitemap=[sitemap]'
-sitemap_variants: {  }
