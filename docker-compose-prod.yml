@@ -42,10 +42,10 @@ services:
       - external
 
 #  certbot:
+#    image: certbot/certbot
+#    container_name: ${PROJECT_NAME}-certbot
 #    depends_on:
 #      - webserver
-#    image: certbot/certbot
-#    container_name: certbot
 #    volumes:
 #      - certbot-etc:/etc/letsencrypt
 #      - ./docroot:/var/www/html
