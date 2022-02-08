@@ -39,6 +39,7 @@ services:
       - certbot-etc:/etc/letsencrypt
     networks:
       - internal
+      - my-passwords
 
   mailhog:
     image: mailhog/mailhog:latest
@@ -72,6 +73,9 @@ services:
 networks:
   internal:
     driver: bridge
+  my-passwords:
+    external: true
+    name: my-passwords_default
 
 volumes:
   db-data:
