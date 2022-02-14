@@ -69,14 +69,14 @@ services:
 #    volumes:
 #      - certbot-etc:/etc/letsencrypt
 #      - ./docroot:/var/www/html
-#    command: certonly --webroot --webroot-path=/var/www/html --email achraf.jday@gmail.com --agree-tos --no-eff-email --force-renewal -d passwordlocker.me -d www.passwordlocker.me
+#    command: certonly --webroot --webroot-path=/var/www/html --email achraf.jday@gmail.com --agree-tos --no-eff-email --force-renewal --expand -d passwordlocker.me,www.passwordlocker.me,bo.passwordlocker.me
 
 networks:
   internal:
     driver: bridge
   my-passwords:
     external: true
-    name: my-passwords_default
+    name: my-passwords-front-end_default
 
 volumes:
   db-data:
